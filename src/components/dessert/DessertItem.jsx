@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { usePost } from "http://localhost:5173/src/store/DessertProvider";
+import { usePost } from "https://productlistwithcartmainreact.vercel.app/src/store/DessertProvider";
 
 import './dessertItem.css'
 import { useMediaQuery } from './useMediaQuery';
@@ -14,7 +14,7 @@ const DessertItem = (DessertItem) => {
    // const { desserts , AddDessert, RemoveDessert } = usePost();
     const {desserts,AddDessert,RemoveDessert} = usePost();
     const { name, category, price, image } = item;
-    
+
     const desktopImage = 'http://localhost:5173/src/' + image.desktop;
     const tabletImage = 'http://localhost:5173/src/' + image.tablet;
     const mobileImage = 'http://localhost:5173/src/' + image.mobile;
