@@ -1,5 +1,5 @@
 import './emptyCart.css'
-import emptyCartImage from 'https://productlistwithcartmainreact.vercel.app/src/assets/images/illustration-empty-cart.svg';
+import emptyCartImage from '/src/assets/images/illustration-empty-cart.svg';
 
 const EmptyCart = () => {
     return(

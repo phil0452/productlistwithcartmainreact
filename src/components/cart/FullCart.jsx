@@ -1,12 +1,12 @@
-import { usePost } from "../src/store/DessertProvider";
+import { usePost } from "/src/store/DessertProvider";
 import { useState } from "react";
 
 import CartItem from './CartItem.jsx'
 import ModalCart from "./ModalCart";
 
 import './fullCart.css';
-import carbonNeutralImage from "http://localhost:5173/src/assets/images/icon-carbon-neutral.svg";
-import orderConfirmedImage from "http://localhost:5173/src/assets/images/icon-order-confirmed.svg";
+import carbonNeutralImage from "/src/assets/images/icon-carbon-neutral.svg";
+import orderConfirmedImage from "/src/assets/images/icon-order-confirmed.svg";
 import Modal from "react-modal";
 import { motion, AnimatePresence } from "framer-motion";
 

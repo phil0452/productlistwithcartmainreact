@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import { usePost } from "../src/store/DessertProvider";
+import { usePost } from "/src/store/DessertProvider";
 
 import './cartItem.css'
-import removeImage from "http://localhost:5173/src/assets/images/icon-remove-item.svg"
+import removeImage from "/src/assets/images/icon-remove-item.svg"
 
 const CartItem = (dessert) => {
     const { TakeAwayDessert } = usePost();
