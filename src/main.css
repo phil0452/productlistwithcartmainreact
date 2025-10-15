@@ -1,0 +1,125 @@
+:root {
+--color-red: 14 86% 42%;
+--color-green: 159 69% 38%;
+
+--color-rose-50: 20 50% 98%;
+--color-rose-100: 13 31% 94%;
+--color-rose-300: 14 25% 72%;
+--color-rose-400: 7 20% 60%;
+--color-rose-500: 12 20% 44%;
+--color-rose-900: 14 65% 9%;
+
+--fontsize-productnames: 16px;
+
+--font-weight-400: 400;
+--font-weight-600: 600;
+--font-weight-700: 700;
+}
+
+.font_size_productnames { font-size: var(--fontsize-productnames);}
+
+.font_weight_400 { font-weight: var(--font-weight-400);}
+.font_weight_600 { font-weight: var(--font-weight-600);}
+.font_weight_700 { font-weight: var(--font-weight-700);}
+
+.text_color_rose_50 { color: hsl(var(--color-rose-50));}
+.text_color_rose_100 { color: hsl(var(--color-rose-100));}
+.text_color_rose_300 { color: hsl(var(--color-rose-300));}
+.text_color_rose_400 { color: hsl(var(--color-rose-400));}
+.text_color_rose_500 { color: hsl(var(--color-rose-500));}
+.text_color_rose_900 { color: hsl(var(--color-rose-900));}
+.text_color_red { color: hsl(var(--color-red));}
+.text_color_white { color: white;}
+
+.bg_color_red { background-color: hsl(var(--color-red));}
+.bg_color_green { background-color: hsl(var(--color-green));}
+.bg_color_white { background-color: white;}
+.bg_color_rose_50 { background-color: hsl(var(--color-rose-50));}
+
+
+@font-face {
+    font-family: 'redhattext';
+    src:url('./assets/fonts/RedHatText-VariableFont_wght.ttf') /* Legacy iOS */
+}
+
+body {
+    font-family: 'redhattext', sans-serif; /* Fallback to sans-serif if the font fails to load */
+    margin: 0;
+    padding: 0;
+    background-color: hsl(var(--color-rose-50));
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;    
+}
+
+.items_container,
+.cart_container {    
+    max-width: 255px;
+    margin-inline: auto;
+}
+
+@media (min-width: 720px) {
+    
+#main {
+    margin: 60px;
+    margin-inline: 70px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.items_container {
+    margin-inline: unset;
+    max-width: unset;
+    flex: 0 0 66.6666%;
+}
+
+.cart_container { 
+    flex: 0 0 33.3333%; 
+    align-self: flex-start;
+}
+}
+
+#desset_menu {
+    margin-block: 30px;
+    margin-inline: auto;
+}
+
+.button {
+    border-radius: 25px;
+    padding: 8px 10px;
+    width: 150px;
+    text-align: center;
+    font-size: 14px;
+    position:relative;
+    z-index: 999;
+    margin-top: -30px;
+    margin-left: 40px;
+    display: none;
+}
+
+.active { display: block;}
+.inactive { display: none; }
+
+.cart_container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.car_items { margin-block: 25px;}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.item_flex {
+    display: flex;
+    justify-content: space-between;
+}
+
