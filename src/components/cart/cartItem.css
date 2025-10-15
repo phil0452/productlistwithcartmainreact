@@ -1,0 +1,31 @@
+.cart_item  { padding: 10px 10px;}
+
+/* checkout cart */
+.item_content > h4,
+.item_content > p { margin-block: 5px;}
+.item_content > p {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.remove_button {
+    border: 1px solid hsl(var(--color-rose-300));
+    font-weight: var(--font-weight-700);
+    width: 17px;
+    border-radius: 18px;
+    height: 16px;
+    float: right;
+    cursor: pointer;
+    background-color: transparent;
+    margin-block: auto;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.remove_button:hover {
+    transform: scale(1.2); /* Scales the element to 120% of its size */
+}
+.remove_button > img {
+    margin-left: -3px;
+    margin-top: 0px;
+    display: block;
+}

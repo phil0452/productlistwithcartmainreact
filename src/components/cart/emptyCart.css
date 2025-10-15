@@ -1,0 +1,12 @@
+#cart_empty p { margin-block: 5px;}
+
+#cart_empty p {
+    font-size: 14px;
+    text-align:center;
+}
+
+.empty_cart_image {
+    width: 150px;
+    display: block;
+    margin-inline: auto;
+}

@@ -1,0 +1,28 @@
+ .confirm_checkout_content >h4 {
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ }
+ 
+ .confirm_checkout_content > * { margin-block: 5px;}
+
+  .truncate {
+  width: 130px; /* Set the desired width */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowed content */
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
+}
+
+.checkout_Item_thumbnail { height: 45px;}
+
+.checkout_Item_Content > div > div.move_left >h4 {
+        margin-block: 0;
+    margin-bottom: 15px;
+}
+.checkout_Item_Content > div > div.move_left >p { margin-bottom: 0px;}
+.checkout_Item_Content > div > div { display: inline-block;}
+.checkout_Item_Content { padding-block: 5px;}
+
+.item_price { margin-left: 10px;}
+.move_left { margin-left: 10px;}    
+.align_item_center { align-self: center;}
