@@ -11,7 +11,7 @@ import './main.css'
 import DessertItem from './components/dessert/DessertItem.jsx'
 import Cart from './components/cart/Cart.jsx'
 
-import data from './store/data.json'
+//import data from './store/data.json'
 
 function App() {
   const content = [
