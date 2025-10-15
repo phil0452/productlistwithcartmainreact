@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { usePost } from "https://productlistwithcartmainreact.vercel.app/src/store/DessertProvider";
+import { usePost } from "../src/store/DessertProvider";
 
 import './dessertItem.css'
 import { useMediaQuery } from './useMediaQuery';
