@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import { usePost } from "https://productlistwithcartmainreact.vercel.app/src/store/DessertProvider";
+import { usePost } from "../src/store/DessertProvider";
 
 import './cartItem.css'
-import removeImage from "https://productlistwithcartmainreact.vercel.app/src/assets/images/icon-remove-item.svg"
+import removeImage from "http://localhost:5173/src/assets/images/icon-remove-item.svg"
 
 const CartItem = (dessert) => {
     const { TakeAwayDessert } = usePost();
@@ -32,5 +32,4 @@ export default CartItem;
 
 CartItem.propTypes = {
   desert: PropTypes.object,
-
 };
