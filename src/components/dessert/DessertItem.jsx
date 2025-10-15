@@ -1,24 +1,24 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { usePost } from "../src/store/DessertProvider";
+import { usePost } from "/src/store/DessertProvider";
 
 import './dessertItem.css'
 import { useMediaQuery } from './useMediaQuery';
 
 const DessertItem = (DessertItem) => {
   const item = DessertItem.dessertInfo;    
-    const addToCartImage = 'http://localhost:5173/src/assets/images/icon-add-to-cart.svg';
-    const decrementImage = 'http://localhost:5173/src/assets/images/icon-decrement-quantity.svg';
-    const incrementImage = 'http://localhost:5173/src/assets/images/icon-increment-quantity.svg';
+    const addToCartImage = '/src/assets/images/icon-add-to-cart.svg';
+    const decrementImage = '/src/assets/images/icon-decrement-quantity.svg';
+    const incrementImage = '/src/assets/images/icon-increment-quantity.svg';
     const [AddToCart, setAddtoCart] = useState(false);
    // const { desserts , AddDessert, RemoveDessert } = usePost();
     const {desserts,AddDessert,RemoveDessert} = usePost();
     const { name, category, price, image } = item;
 
-    const desktopImage = 'http://localhost:5173/src/' + image.desktop;
-    const tabletImage = 'http://localhost:5173/src/' + image.tablet;
-    const mobileImage = 'http://localhost:5173/src/' + image.mobile;
-    const thumbnailImage = 'http://localhost:5173/src/' + image.thumbnail;
+    const desktopImage = '/src/' + image.desktop;
+    const tabletImage = '/src/' + image.tablet;
+    const mobileImage = '/src/' + image.mobile;
+    const thumbnailImage = '/src/' + image.thumbnail;
     const isLargeScreen = useMediaQuery('(min-width: 720px)');
     const isTablet = useMediaQuery('(min-width: 475px) and (max-width: 720px)');
     const isMobile = useMediaQuery('(max-width: 470px)');
