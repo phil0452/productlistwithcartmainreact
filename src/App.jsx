@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { DessertProvider } from "./store/DessertProvider";
+import { DessertProvider } from "https://productlistwithcartmainreact.vercel.app/src/store/DessertProvider";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -11,7 +11,7 @@ import './main.css'
 import DessertItem from './components/dessert/DessertItem.jsx'
 import Cart from './components/cart/Cart.jsx'
 
-//import data from './store/data.json'
+import data from './store/data.json'
 
 function App() {
   const content = [
