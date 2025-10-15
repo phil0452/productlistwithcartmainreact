@@ -1,22 +1,9 @@
 {
-"version": 2,
-"builds": [
+  "headers": [
     {
-        "src": "src/main.jsx",
-        "use": "@vercel/node"
+      "source": "/assets/(.*).js",
+      "headers": [{ "key": "Content-Type", "value": "application/javascript" }]
     }
-],
-"routes": [
-    {
-        "src": "/(.*)",
-        "dest": "src/main.jsx",
-        "methods": [
-            "GET",
-            "POST",
-            "PUT",
-            "PATCH"
-            "DELETE",
-            "OPTIONS"
-        ]
-    }
-]
+  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
