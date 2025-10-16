@@ -3,7 +3,7 @@ import './modalCart.css'
 
 function ModalCart({dessert}) {
     const { type, quantity, price, image, name } = dessert;
-    const thumbnailImage = 'http://localhost:5173/src/' + image.thumbnail;
+    const thumbnailImage = '/src/' + image.thumbnail;
     const cost = quantity * price;
 
     return (
@@ -33,4 +33,5 @@ export default ModalCart;
 
 ModalCart.propTypes = {
   desert: PropTypes.object,
+
 };
