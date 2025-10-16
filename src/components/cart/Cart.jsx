@@ -1,4 +1,4 @@
-import { usePost } from "http://localhost:5173/src/store/DessertProvider";
+import { usePost } from "/src/store/DessertProvider";
 
 import EmptyCart from './EmptyCart.jsx';
 import FullCart from './FullCart.jsx';
@@ -26,5 +26,6 @@ const Cart = () => {
         </>
     );
 }
+
 
 export default Cart;
