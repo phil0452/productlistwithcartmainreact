@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/assets/(.*).js",
+      "source": "/assets/(.*)\\.(js|jsx)",
       "headers": [{ "key": "Content-Type", "value": "application/javascript" }]
     }
   ],
