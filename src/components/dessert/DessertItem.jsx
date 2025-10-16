@@ -17,7 +17,7 @@ const DessertItem = (DessertItem) => {
 
     const desktopImage = image.desktop;
     const tabletImage = image.tablet;
-    const mobileImage = image.mobile.replace("./", "./src/");
+    const mobileImage = require(image.mobile);
     const thumbnailImage = image.thumbnail;
     const isLargeScreen = useMediaQuery('(min-width: 720px)');
     const isTablet = useMediaQuery('(min-width: 475px) and (max-width: 720px)');
@@ -89,6 +89,7 @@ DessertItem.propTypes = {
   DessertItem: PropTypes.array,
 
 };
+
 
 
 
