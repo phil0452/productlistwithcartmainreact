@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { usePost } from "/src/store/DessertProvider";
 
@@ -17,7 +17,7 @@ const DessertItem = (DessertItem) => {
 
     const desktopImage = image.desktop;
     const tabletImage = image.tablet;
-    const mobileImage = require(image.mobile);
+    const mobileImage = image.mobile;
     const thumbnailImage = image.thumbnail;
     const isLargeScreen = useMediaQuery('(min-width: 720px)');
     const isTablet = useMediaQuery('(min-width: 475px) and (max-width: 720px)');
@@ -89,6 +89,7 @@ DessertItem.propTypes = {
   DessertItem: PropTypes.array,
 
 };
+
 
 
 
