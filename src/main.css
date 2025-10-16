@@ -39,7 +39,7 @@
 
 @font-face {
     font-family: 'redhattext';
-    src:url('./assets/fonts/RedHatText-VariableFont_wght.ttf') /* Legacy iOS */
+    src:url('/assets/fonts/RedHatText-VariableFont_wght.ttf') /* Legacy iOS */
 }
 
 body {
@@ -122,4 +122,5 @@ h1 {
     display: flex;
     justify-content: space-between;
 }
+
 
