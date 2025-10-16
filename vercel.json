@@ -3,10 +3,6 @@
     {
       "source": "/assets/(.*)\\.(js|jsx)",
       "headers": [{ "key": "Content-Type", "value": "application/javascript" }]
-    },
-    {
-      "source": "/assets/(.*)\\.jpg",
-      "headers": [{ "key": "Content-Type", "value": "image/jpeg" }]
     }
   ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
