@@ -2,23 +2,20 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { usePost } from "/src/store/DessertProvider";
 
-import './dessertItem.css'
-import { useMediaQuery } from './useMediaQuery';
+import './dessertItem.css' //for a file in the same directory
+import { useMediaQuery } from './useMediaQuery'; //for a file in the same directory
+import addToCartImage from '/src/assets/images/icon-add-to-cart.svg'; //when the file path is absolute (here, must start with src)
+import decrementImage from '/src/assets/images/icon-decrement-quantity.svg'; //when the file path is absolute (here, must start with src)
+import incrementImage from '/src/assets/images/icon-increment-quantity.svg'; //when the file path is absolute (here, must start with src)
 
 const DessertItem = (DessertItem) => {
   const item = DessertItem.dessertInfo;    
-    const addToCartImage = './src/assets/images/icon-add-to-cart.svg';
-    const decrementImage = './src/assets/images/icon-decrement-quantity.svg';
-    const incrementImage = './src/assets/images/icon-increment-quantity.svg';
+    
     const [AddToCart, setAddtoCart] = useState(false);
    // const { desserts , AddDessert, RemoveDessert } = usePost();
     const {desserts,AddDessert,RemoveDessert} = usePost();
     const { name, category, price, image } = item;
 
-    const desktopImage = image.desktop;
-    const tabletImage = image.tablet;
-    const mobileImage = image.mobile;
-    const thumbnailImage = require(image.thumbnail);
     const isLargeScreen = useMediaQuery('(min-width: 720px)');
     const isTablet = useMediaQuery('(min-width: 475px) and (max-width: 720px)');
     const isMobile = useMediaQuery('(max-width: 470px)');
@@ -53,9 +50,9 @@ const DessertItem = (DessertItem) => {
     return(
         <>
             <div className="dessert_item">
-                {isLargeScreen && <img className={"dessert_image " + ImageClasses} src={desktopImage} alt="Waffle with Berries" data-thumbnail-img={thumbnailImage} />}
-                {isTablet && <img className={"dessert_image " + ImageClasses} src={tabletImage} alt="Waffle with Berries" data-thumbnail-img={thumbnailImage} />}
-                {isMobile && <img className={"dessert_image " + ImageClasses} src={mobileImage} alt="Waffle with Berries" data-thumbnail-img={thumbnailImage} />}
+                {isLargeScreen && <img className={"dessert_image " + ImageClasses} src={image.desktop} alt={name} data-thumbnail-img={image.thumbnail} />}
+                {isTablet && <img className={"dessert_image " + ImageClasses} src={image.tablet} alt={name} data-thumbnail-img={image.thumbnail} />}
+                {isMobile && <img className={"dessert_image " + ImageClasses} src={image.mobile} alt={name} data-thumbnail-img={image.thumbnail} />}
                 <div className={"button add_to_cart_button bg_color_white text_color_rose_900 font_weight_600 " + addToCartClasses} onClick={() => AddItem(DessertItem.dessertInfo)}
                 data-product-name="Waffle with Berries">
                     <img src={addToCartImage} alt="add to cart" />
@@ -87,13 +84,4 @@ export default DessertItem;
 
 DessertItem.propTypes = {
   DessertItem: PropTypes.array,
-
 };
-
-
-
-
-
-
-
-
