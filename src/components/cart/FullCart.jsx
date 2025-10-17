@@ -18,7 +18,7 @@ const FullCart = () => {
         (total, item) => total + item.quantity * item.price, 
         0 //starting with zero
     );
-
+    
     const handleConfirm = () => {
         setShowModal(true);
     };

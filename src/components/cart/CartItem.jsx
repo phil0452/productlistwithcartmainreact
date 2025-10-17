@@ -6,6 +6,7 @@ import removeImage from "/src/assets/images/icon-remove-item.svg"
 
 const CartItem = (dessert) => {
     const { TakeAwayDessert } = usePost();
+    debugger;
     const { category, quantity, price, name } = dessert.dessertInfo;
     const cost = quantity * price;
 

@@ -3,7 +3,7 @@ import './modalCart.css'
 
 function ModalCart({dessert}) {
     const { type, quantity, price, image, name } = dessert;
-    const thumbnailImage = '/src/' + image.thumbnail;
+    
     const cost = quantity * price;
 
     return (
@@ -12,7 +12,7 @@ function ModalCart({dessert}) {
                 <div className="checkout_Item_Content item_flex">
                     <div>
                         <div>
-                            <img src={thumbnailImage} className="checkout_Item_thumbnail" alt={name} />
+                            <img src={image.thumbnail} className="checkout_Item_thumbnail" alt={name} />
                         </div>
                         <div className="move_left">
                             <h4 className="item_name text_color_rose_900 font_weight_600 truncate">{name}</h4>
@@ -33,5 +33,4 @@ export default ModalCart;
 
 ModalCart.propTypes = {
   desert: PropTypes.object,
-
 };
